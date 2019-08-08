@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_948379_7qwmkwm67cf.css">
+  <title><%=pageTitle%></title>
+</head>
+<body>
+<div class="layout">
+  <!-- <div class="top-bar">
+    <div class="container clearfix">
+      <span class="pull-left">嘉港通欢迎您！</span>
+      <div class="login-area pull-right">
+        <a href="#" data-toggle="modal" data-target="#loginModal"><i class="iconfont icon-user"></i> 登录</a>
+      </div>
+    </div>
+  </div> -->
+  <div class="layout-header <%if(page){%>layout-header-static<%}%> container-fluid">
+    <div class="navbar main-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="navbar-brand"><img src="<%if(page){%><%=require('../../assets/logo.gif')%><%}else{%><%=require('../../assets/logo.png')%><%}%>"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav <%if(page){%>navbar-nav-light<%}%> navbar-right">
+            <%_.each(menuData, (m) => {%>
+              <%if(m.children && m.children.length >0){%>
+              <li class="dropdown <%if(current && current==m.href){%>current<%}%>">
+                  <a href="javascript:;" class="dropdown-toggle" data-hover="dropdown" data-delay="200" role="button" aria-haspopup="true" aria-expanded="false"><%=m.name%> <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <%_.each(m.children, child => {%>
+                    <li><a href="<%=child.href%>"><%=child.name%></a></li>
+                    <%})%>
+                  </ul>
+              </li>
+              <%}else{%>
+                <li class="<%if(current && current==m.href){%>current<%}%>">
+                  <a href="<%=m.href%>"><%=m.name%></a>
+                </li>
+              <%}%>
+            <%})%>
+            <li><a href="javascript:;"><i class="iconfont tlog-phone-iphone"></i>手机APP</a></li>
+            <li class="login-link"><a href="javascript:;" class="btn-round">登 录</a></li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+  </div>

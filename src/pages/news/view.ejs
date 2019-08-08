@@ -1,0 +1,52 @@
+<div class="layout-page-banner news-banner"></div>
+<div class="news-tab container-fluid">
+  <ul class="container">
+    <li data-category="X" class="active">公司新闻</li>
+    <li data-category="G">通知公告</li>
+    <li data-category="Z">行业资讯</li>
+  </ul>
+</div>
+<div class="page-container news-container container-fluid">
+  <div class="container" id="newsList">
+    <ul class="news-list skeleton">
+      <li class="clearfix skeleton-item mb8"></li>
+      <li class="clearfix skeleton-item mb8"></li>
+      <li class="clearfix skeleton-item mb8"></li>
+      <li class="clearfix skeleton-item mb8"></li>
+      <li class="clearfix skeleton-item mb8"></li>
+      <li class="clearfix skeleton-item mb8"></li>
+      <li class="clearfix skeleton-item mb8"></li>
+      <li class="clearfix skeleton-item mb8"></li>
+      <li class="clearfix skeleton-item mb8"></li>
+      <li class="clearfix skeleton-item"></li>
+    </ul>
+  </div>
+</div>
+
+
+<script type="text/template" id="news-skeleton">
+<ul class="news-list skeleton">
+  <li class="clearfix skeleton-item mb8"></li>
+  <li class="clearfix skeleton-item mb8"></li>
+  <li class="clearfix skeleton-item mb8"></li>
+  <li class="clearfix skeleton-item mb8"></li>
+  <li class="clearfix skeleton-item mb8"></li>
+  <li class="clearfix skeleton-item mb8"></li>
+  <li class="clearfix skeleton-item mb8"></li>
+  <li class="clearfix skeleton-item mb8"></li>
+  <li class="clearfix skeleton-item mb8"></li>
+  <li class="clearfix skeleton-item"></li>
+</ul>
+</script>
+<script type="text/template" id="news-tpl">
+<ul class="news-list">
+  {_.each(data, function(item){ }
+  <li class="clearfix">
+    <a href="newsDetail.html?id={{item.id}}" class="pull-left">{{item.title}}</a>
+    <span class="pull-right time">{{item.createDate}}</span>
+  </li>
+  {})}
+</ul>
+</script>
+
+

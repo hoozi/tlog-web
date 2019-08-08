@@ -1,0 +1,40 @@
+@import './var.scss';
+@import './reset.scss';
+@import './base.scss';
+@import './layout.scss';
+@import './iconfont.scss';
+
+.news-container {
+  padding-top: 24px;
+}
+
+.news-tab {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  li {
+    cursor: pointer;
+    padding:0 16px;
+    display: inline-block;
+    line-height: 50px;
+    font-weight: 500;
+    &.active {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+}
+
+.news-list {
+  background:url('../assets/data-bg.png') no-repeat center center;
+  min-height: 500px;
+  li {
+    overflow: hidden;
+    line-height: 24px;
+    a, span {
+      display: inline-block;
+    }
+    span {
+      color:$sub-text-color;
+    }
+  }
+}

@@ -1,0 +1,377 @@
+<div class="layout-page-banner index-banner">
+  <div class="layout-page-banner-cycle-banner" id="cycle">
+    <div class="cycle-banner1 cycle-banner"></div>
+    <div class="cycle-banner2 cycle-banner"></div>
+  </div>
+  <div class="container banner-search">
+    <div class="layout-page-banner-search">
+      <ul class="search-tab-nav clearfix">
+        <li class="active">
+          <span>查运价</span>
+        </li>
+        <li>
+          <span>查货盘</span>
+        </li>
+        <li>
+          <span>查船盘</span>
+        </li>
+      </ul>
+      <div class="search-tab-content">
+        <button class="search-tab-btn">查 询</button>
+      </div>
+    </div>
+    <div class="banner-desc">
+      <span><i class="iconfont tlog-flare"></i> 优化、设计“门/港-门/港”全程物流方案</span>
+      <span><i class="iconfont tlog-show-chart"></i> 科学匹配、良性循环 提高船舶周转效率</span>
+      <span><i class="iconfont tlog-attach-money"></i> 提供包括船货代理、保险、商检等一系列物流增值服务</span>
+    </div>
+  </div>
+</div>
+<div class="section section-publicInfo">
+  <div class="container mb24">
+    <div class="info-card">
+      <div class="info-card-header clearfix">
+        <h2 class="pull-left">物流产品</h2>
+        <a href="###" class="pull-right">查看更多</a>
+      </div>
+      <div class="info-card-body">
+        <table class="info-table">
+          <thead>
+            <tr>
+              <th>起始地</th>
+              <th>目的地</th>
+              <th>货类</th>
+              <th>运期</th>
+              <th>里程</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="5">
+                <div style="padding:24px 0;"><img src="<%=require('../../assets/noinfo.svg')%>" alt="" height="100"><p>暂无信息</p></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="container mb24">
+    <div class="info-card">
+      <div class="info-card-header clearfix">
+        <h2 class="pull-left">货盘信息</h2>
+        <a href="###" class="pull-right">查看更多</a>
+      </div>
+      <div class="info-card-body">
+        <table class="info-table">
+          <thead>
+            <tr>
+              <th>起始地</th>
+              <th>目的地</th>
+              <th>货类</th>
+              <th>货名</th>
+              <th>吨位</th>
+              <th>有效期</th>
+              <!--<th>操作</th>-->
+            </tr>
+          </thead>
+          <tbody id="cargo-area">
+            <tr>
+              <td colspan="6"><div style="line-height: 100px;text-align: center; color:#409eff;">货盘加载中...</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="info-card">
+      <div class="info-card-header clearfix">
+        <h2 class="pull-left">运力信息</h2>
+        <a href="###" class="pull-right">查看更多</a>
+      </div>
+      <div class="info-card-body">
+        <table class="info-table">
+          <thead>
+            <tr>
+              <th>起始地</th>
+              <th>目的地</th>
+              <th>货类</th>
+              <th>运期</th>
+              <th>里程</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="5">
+                <div style="padding:24px 0;"><img src="<%=require('../../assets/noinfo.svg')%>" alt="" height="100"><p>暂无信息</p></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="section section-youshi">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <i class="iconfont tlog-location-city"></i>
+        <h3>港口平台优势</h3>
+        <p>依托宁波舟山港发挥深水良港<br/>区位优势和散货进江体系优势</p>
+      </div>
+      <div class="col-lg-4 mid">
+        <i class="iconfont tlog-pie-chart"></i>
+        <h3>资源集聚优势</h3>
+        <p>集聚船舶、货源、信息资源<br/>搭建“船-货-港”三方桥梁。</p>
+      </div>
+      <div class="col-lg-4">
+        <i class="iconfont tlog-supervisor-account"></i>
+        <h3>专业团队优势</h3>
+        <p>资深的全程物流方案设计团队<br/>专业的全程物流运营操作团队</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <div class="section section-youshi">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <i class="iconfont tlog-location-city"></i>
+        <h3>港口平台优势</h3>
+        <p>依托宁波舟山港发挥深水良港<br/>区位优势和散货进江体系优势</p>
+      </div>
+      <div class="col-lg-4 mid">
+        <i class="iconfont tlog-pie-chart"></i>
+        <h3>资源集聚优势</h3>
+        <p>集聚船舶、货源、信息资源<br/>搭建“船-货-港”三方桥梁。</p>
+      </div>
+      <div class="col-lg-4">
+        <i class="iconfont tlog-supervisor-account"></i>
+        <h3>专业团队优势</h3>
+        <p>资深的全程物流方案设计团队<br/>专业的全程物流运营操作团队</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="section section-news">
+  <div class="container" id="news-area">
+    <div class="row skeleton">
+      <div class="col-lg-5">
+        <h2 class="news-title">热点资讯</h2>
+        <div class="news-content news-hot">
+          <div class="news-img skeleton-item"></div>
+          <div class="news-hot-list">
+            <ul>
+              <li>
+                <a href="###" class="news-cat skeleton-item" ></a>
+                <a href="###" class="news-link skeleton-item"></a>
+              </li>
+              <li>
+                <a href="###" class="news-cat skeleton-item"></a>
+                <a href="###" class="news-link skeleton-item"></a>
+              </li>
+              <li>
+                <a href="###" class="news-cat skeleton-item"></a>
+                <a href="###" class="news-link skeleton-item"></a>
+              </li>
+              <li>
+                <a href="###" class="news-cat skeleton-item"></a>
+                <a href="###" class="news-link skeleton-item"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <h2 class="news-title">最新资讯</h2>
+        <div class="news-content news-lastest">
+          <ul>
+            <li class="clearfix">
+              <a href="###" class="thumb skeleton-item"></a>
+              <div class="news-text">
+                <h3 class="skeleton-item"></h3>
+                <p class="skeleton-item"></p>
+              </div>
+            </li>
+            <li class="clearfix">
+              <a href="###" class="thumb skeleton-item"></a>
+              <div class="news-text">
+                <h3 class="skeleton-item"></h3>
+                <p class="skeleton-item"></p>
+              </div>
+            </li>
+            <li class="clearfix">
+              <a href="###" class="thumb skeleton-item"></a>
+              <div class="news-text">
+                <h3 class="skeleton-item"></h3>
+                <p class="skeleton-item"></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="section section-youshi">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <i class="iconfont tlog-location-city"></i>
+        <h3>港口平台优势</h3>
+        <p>依托宁波舟山港发挥深水良港<br/>区位优势和散货进江体系优势</p>
+      </div>
+      <div class="col-lg-4 mid">
+        <i class="iconfont tlog-pie-chart"></i>
+        <h3>资源集聚优势</h3>
+        <p>集聚船舶、货源、信息资源<br/>搭建“船-货-港”三方桥梁。</p>
+      </div>
+      <div class="col-lg-4">
+        <i class="iconfont tlog-supervisor-account"></i>
+        <h3>专业团队优势</h3>
+        <p>资深的全程物流方案设计团队<br/>专业的全程物流运营操作团队</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="section section-price">
+  <div class="container hfull">
+    <div class="row hfull">
+      <div class="col-lg-2 hfull">
+        <ul class="price-tab-nav hfull">
+          <li class="active">运价信息</li>
+          <li>货盘信息</li>
+          <li>船盘信息</li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="col-lg-10 hfull">
+        <div class="price-table-container hfull">
+          <div class="price-table-wrapper hfull">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>起始地</th>
+                  <th>目的地</th>
+                  <th>船型</th>
+                  <th>价格</th>
+                  <th>发布日期</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>宁波</td>
+                  <td>天津</td>
+                  <td>大船</td>
+                  <td>¥2000</td>
+                  <td>2019-08-09</td>
+                  <td><a href="###" class="btn-round">立即定制</a></td>
+                </tr>
+                <tr>
+                  <td>宁波</td>
+                  <td>天津</td>
+                  <td>大船</td>
+                  <td>¥2000</td>
+                  <td>2019-08-09</td>
+                  <td><a href="###" class="btn-round">立即定制</a></td>
+                </tr>
+                <tr>
+                  <td>宁波</td>
+                  <td>天津</td>
+                  <td>大船</td>
+                  <td>¥2000</td>
+                  <td>2019-08-09</td>
+                  <td><a href="###" class="btn-round">立即定制</a></td>
+                </tr>
+                <tr>
+                  <td>宁波</td>
+                  <td>天津</td>
+                  <td>大船</td>
+                  <td>¥2000</td>
+                  <td>2019-08-09</td>
+                  <td><a href="###" class="btn-round">立即定制</a></td>
+                </tr>
+                <tr>
+                  <td>宁波</td>
+                  <td>天津</td>
+                  <td>大船</td>
+                  <td>¥2000</td>
+                  <td>2019-08-09</td>
+                  <td><a href="###" class="btn-round">立即定制</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div> -->
+
+
+<script type="text/template" id="news-tpl">
+<div class="row">
+  <div class="col-lg-5">
+    <h2 class="news-title">热点资讯</h2>
+    <div class="news-content news-hot">
+      <div class="news-img">
+        <a href="newsDetail.html?id={{hot_id}}">
+          <img src="<%=require('../../assets/NoNews.jpg')%>" alt="">
+          <div class="news-img-text text-ellipsis">{{hot_title}}</div>
+        </a>
+      </div>
+      <div class="news-hot-list">
+        <ul>
+          { _.each(hotList, function(item){ }
+            <li>
+              <span class="news-cat">{{item.cat}}</span>
+              <a href="newsDetail.html?id={{item.id}}" class="news-link">{{item.title}}</a>
+            </li>
+          {})}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-7">
+    <h2 class="news-title">最新资讯</h2>
+    <div class="news-content news-lastest">
+      <ul>
+        {_.each(news_lastest, function(item){}
+        <li class="clearfix">
+          <a href="newsDetail.html?id={{item.id}}" class="thumb">
+            <img src="<%=require('../../assets/NoNews.jpg')%>" alt="">
+          </a>
+          <div class="news-text">
+            <h3><a href="newsDetail.html?id={{item.id}}">{{item.title}}</a></h3>
+            <p>{{item.desc}}</p>
+          </div>
+        </li>
+        {})}
+      </ul>
+    </div>
+  </div>
+</div>
+</script>
+
+<script type="text/template" id="cargo-tpl">
+{_.each(data, function(item){}
+<tr>
+  <td>{{item.originName}}</td>
+  <td>{{item.terminalName}}</td>
+  <td>{{item.cargoTypeName}}</td>
+  <td>{{item.cargo}}</td>
+  <td>{{item.tonnage}}吨</td>
+  <td>{{item.beginDate}} 至 {{item.endDate}}</td>
+  <!--<td><a href="###" class="btn-round">下单</a></td>-->
+</tr>
+{})}
+</script>
+
+

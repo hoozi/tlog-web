@@ -1,0 +1,52 @@
+  <div class="layout-footer">
+    <p class="copyright text-center">Copyright <i class="iconfont icon-copyright mr0"></i> 2019 <%=copyright%></p>
+  </div>
+</div>
+<div class="modal fade login-modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h2>登 录</h2>
+        <form id="login-form">
+          <div class="input-group mb16">
+            <span class="input-group-addon"><i class="iconfont icon-user"></i></span>
+            <input type="text" class="form-control" name="uid" id="uid" placeholder="用户名" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb16">
+            <span class="input-group-addon"><i class="iconfont icon-unlock"></i></span>
+            <input type="password" class="form-control" name="password" id="password" placeholder="密码" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb16">
+            <span class="input-group-addon"><i class="iconfont icon-safetycertificate"></i></span>
+            <input type="text" class="form-control form-control--safe" name="yzm" id="yzm" placeholder="验证码" aria-describedby="basic-addon1">
+            <div class="form-control--pic">
+              <img id="checkImageButton" src="/jgt/index/createCheckImages.action" alt="" title="点击切换验证码">
+            </div>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-primary btn-lg" id="login-button" data-loading-text="登录中...">登 录</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade branch-modal" id="branch-modal" tabindex="-1" role="dialog" aria-labelledby="branchLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="branchLabel">支线船期</h4>
+      </div>
+      <div class="modal-body" id="load-branch">
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&uid=3007863" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+  document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+</body>
+</html>

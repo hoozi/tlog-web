@@ -1,0 +1,41 @@
+@import './var.scss';
+@import './reset.scss';
+@import './base.scss';
+@import './layout.scss';
+@import './iconfont.scss';
+
+.news-container {
+  padding-top: 24px;
+}
+
+.news-title {
+  padding-bottom: 8px;
+  line-height: 30px;
+  text-align:center;
+  font-size: 30px;
+  &.skeleton-item {
+    width: 200px;
+    margin: 0 auto 8px;
+  }
+}
+
+.news-extra {
+  color: $sub-text-color;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 24px;
+  span {
+    display: inline-block;
+    padding:0 16px;
+  }
+}
+.news-content {
+  line-height: 23px;
+  margin-top: 24px;
+}
+
+.share {
+  a {
+    height: 22px;
+  }
+}

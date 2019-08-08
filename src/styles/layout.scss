@@ -1,0 +1,107 @@
+$perfix: layout;
+$bannerPerfix: #{$perfix}-page-banner;
+
+.#{$perfix} {
+  position: relative;
+  #{&}-header {
+    position: absolute;
+    left:0;
+    right: 0;
+    top:0;
+    background-color: transparent;
+    z-index: 100;
+    &.layout-header-static {
+      position: static;
+    }
+  }
+  #{&}-header,
+  #{&}-footer,
+  #{&}-page{
+    .#{$bannerPerfix}{
+      width: 100%;
+      height: 650px;
+      overflow: hidden;
+      position: relative;
+      background-repeat: no-repeat;
+      background-position: top center;
+      //background-size: cover;
+      .banner-title {
+        font-size: 32px;
+        line-height: 90px;
+        color: rgba(255,255,255,.9);
+      }
+      .#{$bannerPerfix}__sm {
+        height: 260px;
+      }
+      .#{$bannerPerfix}-text {
+        //background-color: rgba(0,0,0,.5);
+        color: #fff;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        height: 56px;
+        top: 50%;
+        margin-top: -28px;
+      }
+      .#{$bannerPerfix}-search {
+        background-color: rgba(0,0,0,.5);
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        width: 850px;
+        padding: 24px;
+        box-sizing: border-box;
+        height: 130px;
+        margin: 320px 0 0 -425px;
+        border-radius: 8px;
+        z-index: 100;
+      }
+      &.index-banner {
+        background-image: url('../assets/banner.jpg');
+      }
+      &.news-banner {
+        background-image: url('../assets/nbanner.jpg');
+        height: 90px;
+      }
+      .#{$bannerPerfix}-cycle-banner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        .cycle-banner {
+          background-repeat: no-repeat;
+          background-position: top center;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          &.cycle-banner1 {
+            background-image: url('../assets/banner.jpg');
+          }
+          &.cycle-banner2 {
+            background-image: url('../assets/banner1.jpg');
+          }
+        }
+        
+      }
+      &.detail-banner {
+        height:300px;
+        //background-image: url('../assets/nb.jpg');
+      }
+    }
+  }
+  #{&}-footer {
+    background-color: #fff;
+    padding: 24px 0;
+    .copyright {
+      color: #73777a;
+      font-size: 14px;
+    }
+  }
+}
+
+.section {
+  width: 100%;
+}
