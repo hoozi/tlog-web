@@ -11,8 +11,12 @@ $('#cycle').cycle({
 
 const newsTpl = $('#news-tpl').html();
 const cargoTpl = $('#cargo-tpl').html();
+const transportTpl = $('#transport-tpl').html();
+const logisticsTpl = $('#logistics-tpl').html();
 const newsCompile = _.template(newsTpl);
 const cargoCompile = _.template(cargoTpl);
+const transportCompile = _.template(transportTpl);
+const logisticsCompile = _.template(logisticsTpl);
 
 async function getNewsList() {
   const response = await service('queryNews', {
@@ -46,11 +50,45 @@ async function getCargo() {
   });
   if(!response || !response.success) return;
   const data = {
-    data: response.data.recordList
+    data: response.data.recordList.map(item => {
+      const { beginDate='', endDate='' } = item;
+      return {
+        ...item,
+        beginDate: beginDate.substring(0,10),
+        endDate: endDate.substring(0,10)
+      }
+    })
   };
   $('#cargo-area').html(cargoCompile(data))
 }
 
+async function getTransport() {
+  const response = await service('queryTransport', {
+    "crudType": "retrieve",
+    "current": 1,
+    "size": 10,
+    "status": 30
+  });
+  if(!response || !response.success) return;
+  const data = {
+    data: response.data.recordList
+  }
+  $('#transport-area').html(transportCompile(data))
+}
+
+async function getLogistics() {
+  const response = await service('queryLogistics', {
+    "crudType": "retrieve",
+    "current": 1,
+    "size": 10,
+    "status": 'B'
+  });
+  if(!response || !response.success) return;
+  const data = {
+    data: response.data.recordList
+  }
+  $('#logistics-area').html(logisticsCompile(data))
+}
 function createHot(data) {
   const hot = data.slice(0,5);
   //const lastest = data.slice(5, 8);
@@ -82,4 +120,6 @@ function createLastest(data) {
 }
 
 getCargo();
+getLogistics();
+getTransport();
 getNewsList();

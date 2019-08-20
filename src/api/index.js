@@ -15,6 +15,19 @@ async function queryCargo(params, token) {
   })
 }
 
+async function queryTransport(params, token) {
+  return request(`/ierp/kapi/app/nbg_qcwl/web_transport?access_token=${token}`, {
+    data: params
+  })
+}
+
+async function queryLogistics(params, token) {
+  return request(`/ierp/kapi/app/nbg_qcwl/getProductInfo?access_token=${token}`, {
+    data: params
+  })
+}
+
+
 async function queryToken() {
   return request('/ierp/api/login.do', {
     data:{
@@ -29,7 +42,9 @@ async function queryToken() {
 
 const serviceList = {
   queryNews,
-  queryCargo
+  queryCargo,
+  queryTransport,
+  queryLogistics
 }
 
 export default async function service(name, params){

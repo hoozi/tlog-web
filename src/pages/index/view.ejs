@@ -7,7 +7,7 @@
     <div class="layout-page-banner-search">
       <ul class="search-tab-nav clearfix">
         <li class="active">
-          <span>查运价</span>
+          <span>查产品</span>
         </li>
         <li>
           <span>查货盘</span>
@@ -38,17 +38,18 @@
         <table class="info-table">
           <thead>
             <tr>
-              <th>起始地</th>
+              <th>产品名称</th>
+              <th>出发地</th>
               <th>目的地</th>
-              <th>货类</th>
+              <th>船型</th>
               <th>运期</th>
               <th>里程</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="logistics-area">
             <tr>
-              <td colspan="5">
-                <div style="padding:24px 0;"><img src="<%=require('../../assets/noinfo.svg')%>" alt="" height="100"><p>暂无信息</p></div>
+              <td colspan="6">
+                <div style="line-height: 100px;text-align: center; color:#409eff;">货盘加载中...</div>
               </td>
             </tr>
           </tbody>
@@ -66,18 +67,18 @@
         <table class="info-table">
           <thead>
             <tr>
-              <th>起始地</th>
+              <th>出发地</th>
               <th>目的地</th>
               <th>货类</th>
               <th>货名</th>
               <th>吨位</th>
               <th>有效期</th>
-              <!--<th>操作</th>-->
+              <th>操作</th>
             </tr>
           </thead>
           <tbody id="cargo-area">
             <tr>
-              <td colspan="6"><div style="line-height: 100px;text-align: center; color:#409eff;">货盘加载中...</div></td>
+              <td colspan="7"><div style="line-height: 100px;text-align: center; color:#409eff;">货盘加载中...</div></td>
             </tr>
           </tbody>
         </table>
@@ -94,17 +95,22 @@
         <table class="info-table">
           <thead>
             <tr>
-              <th>起始地</th>
-              <th>目的地</th>
-              <th>货类</th>
-              <th>运期</th>
-              <th>里程</th>
+              <th>名称</th>
+              <th>类型</th>
+              <th>载重吨</th>
+              <th>空闲地</th>
+              <th>服务商</th>
+              <th>联系人</th>
+              <th>联系电话</th>
+              <!-- <th>空闲起止</th>
+              <th>有效期</th>
+              <th>备注</th> -->
             </tr>
           </thead>
-          <tbody>
+          <tbody id="transport-area">
             <tr>
-              <td colspan="5">
-                <div style="padding:24px 0;"><img src="<%=require('../../assets/noinfo.svg')%>" alt="" height="100"><p>暂无信息</p></div>
+              <td colspan="10">
+                <div style="line-height: 100px;text-align: center; color:#409eff;">货盘加载中...</div>
               </td>
             </tr>
           </tbody>
@@ -367,8 +373,41 @@
   <td>{{item.terminalName}}</td>
   <td>{{item.cargoTypeName}}</td>
   <td>{{item.cargo}}</td>
-  <td>{{item.tonnage}}吨</td>
+  <td>{{item.tonnage}}</td>
   <td>{{item.beginDate}} 至 {{item.endDate}}</td>
+  <td><a href="###" class="btn-round">转订单</a></td>
+  <!--<td><a href="###" class="btn-round">下单</a></td>-->
+</tr>
+{})}
+</script>
+
+<script type="text/template" id="transport-tpl">
+  {_.each(data, function(item){}
+  <tr>
+    <td>{{item.transportName}}</td>
+    <td>{{item.transportTypeName}}</td>
+    <td>{{item.loadWeight}}</td>
+    <td>{{item.freePlace}}</td>
+    <td></td>
+    <td>{{item.contact}}</td>
+    <td>{{item.contactTel}}</td>
+    <!-- <td>{{item.freeStartTime}} 至 {{item.freeEndTime}}</td>
+    <td>{{item.validateTime}} 至 {{item.invalidateTime}}</td>
+    <td>{{item.note}}</td> -->
+    <!--<td><a href="###" class="btn-round">下单</a></td>-->
+  </tr>
+  {})}
+  </script>
+
+<script type="text/template" id="logistics-tpl">
+{_.each(data, function(item){}
+<tr>
+  <td>{{item.productName}}</td>
+  <td>{{item.originName}}</td>
+  <td>{{item.terminalName}}</td>
+  <td>{{item.shipTypeName}}</td>
+  <td>{{item.days}}天</td>
+  <td>{{item.mileage}}公里</td>
   <!--<td><a href="###" class="btn-round">下单</a></td>-->
 </tr>
 {})}
