@@ -46,7 +46,7 @@ async function getCargo() {
     "crudType": "retrieve",
     "current": 1,
     "size": 10,
-    "status": 20
+    "status": 30
   });
   if(!response || !response.success) return;
   const data = {
