@@ -55,7 +55,7 @@
     "bootstrap-select": "^1.12.4",
     "es6-promise": "^4.2.4",
     "isomorphic-fetch": "^2.2.1",
-    "jquery": "^1.12.4",
+    "jquery": "^3.5.0",
     "js-cookie": "^2.2.0",
     "layui-src": "^2.4.5",
     "lodash": "^4.17.11",
